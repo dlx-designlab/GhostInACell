@@ -1,3 +1,6 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
 
 .DS_Store
 touchdesigner-project/Image/.DS_Store
@@ -15,3 +18,4 @@ wake-words-recognition/config.py
 touchdesigner-project/.DS_Store
 touchdesigner-project/Dataset/.DS_Store
 touchdesigner-project/Image/.DS_Store
+
