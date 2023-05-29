@@ -1,3 +1,6 @@
+#checking os platform
+from sys import platform
+
 # script configuration
 import config
 
@@ -11,7 +14,18 @@ from pythonosc.osc_message_builder import OscMessageBuilder
 
 #configuring porcupine
 access_key = config.access_key
-keyword_model_paths=['Hello_Neurons_en_mac_v2_2_0.ppn']
+keyword_model_mac=['Hello_Neurons_en_mac_v2_2_0.ppn']
+keyword_model_windows=['Hello-Neurons_en_windows_v2_2_0.ppn']
+keyword_model_paths = ['']
+
+if platform == 'win32': 
+  keyword_model_paths = keyword_model_windows
+elif platform == 'darwin': 
+  keyword_model_paths = keyword_model_mac
+else:
+  print('Operating system not supported. Run this program on a Windows or Mac machine')
+
+
 wakeword = 'Hello Neurons'
 
 # print(pvporcupine.KEYWORDS)
