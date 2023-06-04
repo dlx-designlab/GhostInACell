@@ -19,3 +19,4 @@ touchdesigner-project/.DS_Store
 touchdesigner-project/Dataset/.DS_Store
 touchdesigner-project/Image/.DS_Store
 
+external_mod/wake-words-recognition/config.py
