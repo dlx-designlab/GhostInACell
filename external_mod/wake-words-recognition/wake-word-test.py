@@ -32,7 +32,7 @@ wakeword = 'Hello Neurons'
 porcupine = pvporcupine.create(access_key=access_key, keyword_paths=keyword_model_paths)
 
 # Show available audio devices
-for i, device in enumerate(PvRecorder.get_audio_devices()):
+for i, device in enumerate(PvRecorder.get_available_devices()):
   print('Device %d: %s' % (i, device))
 
 # Setup OSC client
@@ -41,7 +41,7 @@ PORT = 10000
 client = udp_client.UDPClient(IP, PORT)
 
 # init voice recorder
-recorder = PvRecorder(device_index=-1, frame_length=porcupine.frame_length)
+recorder = PvRecorder(device_index=2, frame_length=porcupine.frame_length)
 recorder.start()
 print(f'Listening ... Say "{wakeword}" to trigger (press Ctrl+C to exit)')
 
