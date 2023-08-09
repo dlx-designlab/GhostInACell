@@ -41,7 +41,7 @@ PORT = 10000
 client = udp_client.UDPClient(IP, PORT)
 
 # init voice recorder
-recorder = PvRecorder(device_index=2, frame_length=porcupine.frame_length)
+recorder = PvRecorder(device_index=3, frame_length=porcupine.frame_length)
 recorder.start()
 print(f'Listening ... Say "{wakeword}" to trigger (press Ctrl+C to exit)')
 
